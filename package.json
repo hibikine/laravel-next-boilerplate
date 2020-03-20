@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "docker-compose up --build",
+    "dev-init": "npm ci && npm run start",
+    "container-init": "npm run composer -- install && npm run composer -- run post-root-package-install && npm run composer -- run post-create-project-cmd",
+    "app-bash": "docker-compose exec app bash",
+    "composer": "docker-compose exec app /usr/local/bin/composer",
+    "docker-npm": "docker-compose exec node /usr/local/bin/npm"
+  },
+  "devDependencies": {
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {}
+}
