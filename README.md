@@ -6,25 +6,25 @@
 
 - Docker
 - Docker Compose
-- node > 8
+- node
 
 ## Install
 
 ```bash
-npm run dev-init
-npm run container-init
+yarn dev-init
+yarn container-init
 ```
 
 ### Start Dev Server
 
 ```bash
-npm run start
+yarn start
 ```
 
 ### バックグラウンドでDocker立てる
 
 ```bash
-npm run start -- -d
+yarn start -- -d
 ```
 
 ### composerを叩く
@@ -32,13 +32,7 @@ npm run start -- -d
 docker立ってる前提
 
 ```bash
-npm run composer -- install
-```
-
-### npm i
-
-```bash
-npm run npm-docker -- i hoge
+yarn composer -- install
 ```
 
 ### Nginx Reload
