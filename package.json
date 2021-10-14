@@ -6,16 +6,13 @@
     "app-bash": "docker-compose exec app bash",
     "db-bash": "docker-compose exec db bash",
     "composer": "docker-compose exec app /usr/local/bin/composer",
-    "docker-npm": "docker-compose exec node /usr/local/bin/npm"
+    "docker-npm": "docker-compose exec node /usr/local/bin/npm",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
-    "husky": "^2.4.0",
-    "lint-staged": "^8.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3"
   },
   "lint-staged": {}
 }
